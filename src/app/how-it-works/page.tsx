@@ -48,7 +48,10 @@ const HowItWorks = () => {
         wanted to finally build something small and launch it, and deal with how
         people react with it.
       </p>
-      <p>To contact me about this project please send an email to: </p>
+      <p>
+        To contact me about this project please send an email to:
+        veganonemillion@gmail.com
+      </p>
       <h4 className="font-bold text-2xl">About</h4>
       <p>
         My name is{" "}
