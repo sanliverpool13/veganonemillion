@@ -27,6 +27,11 @@ const HowItWorks = () => {
         demand is unlikely, so we will see.
       </p>
       <p>
+        I will have black squares to mark reserved spots, while approving the
+        images. This process is not efficient as I am doing it manually, so
+        please be patient.
+      </p>
+      <p>
         The million dollar home page went viral and was successfull because it
         was the first of its kind and a novel idea. Since then a lot of
         imitations sprung up and were not successfull, for obvious reasons. So I
