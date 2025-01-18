@@ -180,7 +180,7 @@ const JustImage: React.FC = () => {
             onMouseMove={(e) => handleMouseMove(e, "tooltip6")}
           /> */}
         </map>
-        <img useMap="#imagemap" src="/20by20initialgrid.png" alt="Test Image" />
+        <img useMap="#imagemap" src="/20by20reservegrid.png" alt="Test Image" />
       </div>
     </div>
   );

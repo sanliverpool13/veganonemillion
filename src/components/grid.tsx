@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import gridImageArray from "@/constants/gridImageArray";
 
 // Extend the Window interface to include the Tally property
 declare global {
@@ -37,8 +38,6 @@ declare global {
   }
 }
 
-const imagePaths: string[] = [];
-
 const Grid = () => {
   const openTallyForm = (index: number) => {
     window.Tally.openPopup("n9p5e1", {
@@ -65,7 +64,7 @@ const Grid = () => {
       <div className="container overflow-x-scroll w-full">
         <div className="grid grid-cols-[repeat(50,20px)] grid-rows-[repeat(50,20px)] bg-[#d6e8ca]">
           {Array.from({ length: 2500 }, (_, index) => {
-            const imageSrc = imagePaths[index] || null; // Get image or null
+            const imageSrc = gridImageArray[index]?.imagePath || null; // Get image or null
             if (imageSrc) {
               return (
                 <div key={index} className="relative w-full h-full ">
