@@ -142,25 +142,18 @@ const ImageModalUpload: React.FC<ImageModalUploadProps> = ({
   //   console.log("selectedCell", selectedCell);
   console.log("image file", image);
 
-  const { getRootProps, getInputProps, fileRejections, acceptedFiles } =
-    useDropzone({
-      accept: { "image/*": [".jpeg", ".png"] },
-      maxFiles: 1,
-      onDrop,
-    });
+  const { getRootProps, getInputProps, fileRejections } = useDropzone({
+    accept: { "image/*": [".jpeg", ".png"] },
+    maxFiles: 1,
+    onDrop,
+  });
 
   if (!isOpen) return null;
-  interface FormElements extends HTMLFormControlsCollection {
-    url: HTMLInputElement;
-    email: HTMLInputElement;
-    description: HTMLTextAreaElement;
-  }
-
-  interface FormElement extends HTMLFormElement {
-    elements: FormElements;
-  }
-
-  const handleSubmit = async (e: React.FormEvent<FormElement>) => {};
+  // interface FormElements extends HTMLFormControlsCollection {
+  //   url: HTMLInputElement;
+  //   email: HTMLInputElement;
+  //   description: HTMLTextAreaElement;
+  // }
 
   return (
     <div className="fixed inset-0 flex items-center justify-end bg-black bg-opacity-50 z-50">
@@ -176,7 +169,7 @@ const ImageModalUpload: React.FC<ImageModalUploadProps> = ({
           ✖
         </button>
 
-        <form onSubmit={handleSubmit} className="w-full">
+        <form onSubmit={() => {}} className="w-full">
           <h2 className="text-lg font-bold mb-4">Upload Image</h2>
           <p className="text-gray-700 mb-4">
             Images must be exactly 20x20 pixels.

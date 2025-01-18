@@ -1,12 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
-
-// import Image from "next/image";
+import React, { useEffect } from "react";
 
 const JustImage: React.FC = () => {
   useEffect(() => {
-    // Fetch image areas from the server
-    // setImageAreas();
     const imageMap = Array.from(
       document.querySelectorAll("map[name='imagemap']"),
     );
@@ -15,25 +11,16 @@ const JustImage: React.FC = () => {
 
   const showTooltip = (tooltipId: string) => {
     const tooltip = document.getElementById(tooltipId);
-    // if (tooltip) {
-    //   tooltip.classList.remove("opacity-0", "invisible");
-    //   tooltip.classList.add("opacity-100", "visible");
-    // }
+
     if (tooltip) {
-      //   tooltip.classList.remove("hidden");
-      //   tooltip.classList.add("block");
       tooltip.style.display = "block";
     }
   };
 
   const hideTooltip = (tooltipId: string) => {
     const tooltip = document.getElementById(tooltipId);
-    // if (tooltip) {
-    //   tooltip.classList.add("opacity-0", "invisible");
-    // }
+
     if (tooltip) {
-      //   tooltip.classList.add("hidden");
-      //   tooltip.classList.remove("block");
       tooltip.style.display = "none";
     }
   };
@@ -43,8 +30,7 @@ const JustImage: React.FC = () => {
     tooltipId: string,
   ) => {
     console.log("mouse is entered");
-    // change style of tooltip with that id to display: block
-    // and also update it's position based on the tooltip position
+
     const tooltip = document.getElementById(tooltipId);
     if (!tooltip) return;
     const area = e.target as HTMLAreaElement;
@@ -61,14 +47,6 @@ const JustImage: React.FC = () => {
 
     tooltip!.style.left = `${width}px`;
     tooltip!.style.top = `${height}px`;
-
-    const parentContainer = document.getElementById("map-parent");
-    if (!parentContainer) return;
-    const parentRect = parentContainer.getBoundingClientRect();
-
-    // Calculate the relative position inside the parent
-    const x = e.clientX - parentRect.left + 10; // Offset tooltip slightly
-    const y = e.clientY - parentRect.top - 20; // Position above the cursor
   };
 
   const handleMouseOut = (
