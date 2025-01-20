@@ -11,7 +11,9 @@ interface GridImage {
   imagePath: string;
 }
 
-const initialData: GridImage[] = [];
+const initialData: GridImage[] = [
+  { index: 0, imagePath: "/grid-images/nutsforcheese.jpeg" },
+];
 
 initialData.forEach((data) => {
   gridImageArray[data.index] = { index: data.index, imagePath: data.imagePath };
