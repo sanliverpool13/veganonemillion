@@ -97,6 +97,12 @@ const JustImage: React.FC = () => {
           >
             https://www.instagram.com/to.antivivisection/
           </div>
+          <div
+            id="tooltip3"
+            className={`absolute bg-white border border-gray-500 p-2 shadow-md text-sm opacity-100 hidden  z-10`}
+          >
+            https://thealk.com/
+          </div>
           <area
             shape="rect"
             coords="0,0,20,20"
@@ -116,6 +122,16 @@ const JustImage: React.FC = () => {
             onMouseOver={(e) => handleMouseOver(e, "tooltip2")}
             onMouseOut={(e) => handleMouseOut(e, "tooltip2")}
             onMouseMove={(e) => handleMouseMove(e, "tooltip2")}
+          />
+          <area
+            shape="rect"
+            coords="40,0,60,20"
+            target="_blank"
+            href="https://thealk.com/"
+            alt="One Image"
+            onMouseOver={(e) => handleMouseOver(e, "tooltip3")}
+            onMouseOut={(e) => handleMouseOut(e, "tooltip3")}
+            onMouseMove={(e) => handleMouseMove(e, "tooltip3")}
           />
           {/* <div
             id="tooltip1"
@@ -212,7 +228,7 @@ const JustImage: React.FC = () => {
             onMouseMove={(e) => handleMouseMove(e, "tooltip6")}
           /> */}
         </map>
-        <img useMap="#imagemap" src="/gridv2.png" alt="Test Image" />
+        <img useMap="#imagemap" src="/20by20v3.png" alt="Test Image" />
       </div>
     </div>
   );
